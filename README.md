@@ -9,4 +9,4 @@ Tweaks for Obsidian dark theme
 * smaller fonts
 * improved readability for backlinks pane
 
-![](Obsdn-Dark-Rmx.jpg)
+![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
