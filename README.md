@@ -8,5 +8,6 @@ Tweaks for Obsidian dark theme
 * main editor GUI : flattened + removed rounded corners 
 * smaller fonts
 * improved readability for backlinks pane
+* indentation lines by [Death_au](https://github.com/deathau)
 
 ![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
