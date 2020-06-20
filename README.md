@@ -8,3 +8,5 @@ Tweaks for Obsidian dark theme
 * main editor GUI : flattened + removed rounded corners 
 * smaller fonts
 * improved readability for backlinks pane
+
+![](Obsdn-Dark-Rmx.jpg)
