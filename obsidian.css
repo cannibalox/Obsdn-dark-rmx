@@ -16,7 +16,8 @@
     --scrollbar-bg: rgba(255, 255, 255, 0);
     --scrollbar-thumb-bg: rgba(81, 144, 175, 0.36);
    }
-   
+
+  
 body {
 font-size: 14px;
 }
@@ -139,11 +140,14 @@ ul ul::before { left: -15px; top: 0; bottom: 0; }
     overflow: hidden;
     white-space: nowrap;
            }
-
-
+ 
 /* ===========================*/	
 /* ====== GUI tweaks =========*/
 /* ===========================*/
+
+/* ===== brings back the selection highlight - thanks Klass! ==== */
+ .suggestion-item.is-selected {
+    background-color: var(--text-accent);
 	
 /* ====== scrollbars: no rounded corners =========*/
 
