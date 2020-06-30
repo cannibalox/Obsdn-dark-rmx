@@ -1,4 +1,4 @@
-/* obsdn dark rmx - v202006221552 */
+/* obsdn dark rmx - v202006300034 */
 
 .theme-dark {
     --background-primary: #212121;
@@ -66,16 +66,17 @@ background-color: var(--text-accent-hover);
 .cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px; }
 ul ul::before { left: -15px; top: 0; bottom: 0; }
 
-/*==============TRANSCLUSION=============*/
+/*==============TRANSCLUSION TWEAKS=============*/
 
 .markdown-embed-title {
+  	font-family: sans-serif;
 	font-size: 10px;
     color: rgb(150,200,255);
     line-height: 10px;
     width: 100%;
     text-align: left;
     font-weight: 100;
-    margin : 0px 0px;
+    margin : -4px 0px;
     }
     
 .markdown-preview-view .markdown-embed{
@@ -93,22 +94,22 @@ ul ul::before { left: -15px; top: 0; bottom: 0; }
    display : inline;
    max-height : 100%;
    max-width : 100%;
-   margin : -40px 0px 0px 0px;
+   margin : -25px 0px -15px 0px;
    padding : 0px 0px 5px 0px;
       }
 .markdown-embed-content > * {
    display : block;
    max-height : 100%;
    max-width : 100%;
-   margin : 10px 0px -5px 0px;
+   margin : 10px 0px 5px 0px;
       }
 
  .markdown-embed-link {
-    top: -42px;
-	left: -55px;
+    top: 0px;
+	left: -35px;
     color: #ec0d0d;
     cursor: pointer;
-    position: relative;
+    position: absolute;
 }
 
  .file-embed-link {
