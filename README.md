@@ -7,7 +7,7 @@ a theme for Obsidian.md (light & dark mode)
 * smaller titles for transcluded items
 * main editor GUI : flattened + removed rounded corners 
 * smaller fonts
-* suared tabs
+* squared tabs
 * improved readability for backlinks pane
 * indentation lines by [Death_au](https://github.com/deathau)
 
