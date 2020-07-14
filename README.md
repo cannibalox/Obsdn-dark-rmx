@@ -19,3 +19,8 @@ v20200710 LIGHT version (latest)
 
 v202006 (old)
 ![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
+
+install notes : 
+backup your old obsidian.css, download the release and unzip the obsidian.css in your vault.
+if needed, copy your csss snippets at the end of the file.
+Make sure that `use custom css` option is enabled in the Obsidian settings
