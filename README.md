@@ -12,13 +12,13 @@ a theme for Obsidian.md (light & dark mode)
 * indentation lines by [Death_au](https://github.com/deathau)
 
 v20200710 DARK version (latest)
-![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-drk-rmx_DARK.png)
+![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
 
 v20200710 LIGHT version (latest)
-![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-drk-rmx_LIGHT.png)
+![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx_LIGHT.png)
 
 v202006 (old)
-![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
+![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx_old.png)
 
 install notes : 
 backup your old obsidian.css, download the release and unzip the obsidian.css in your vault.
