@@ -15,7 +15,7 @@ v20200710 DARK version (latest)
 ![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx.png)
 
 v20200710 LIGHT version (latest)
-![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-rmx_LIGHT.png)
+![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-rmx-LIGHT.png)
 
 v202006 (old)
 ![](https://github.com/cannibalox/Obsdn-dark-rmx/blob/master/Obsdn-Dark-Rmx_old.png)
