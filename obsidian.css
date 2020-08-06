@@ -1,7 +1,8 @@
-/* obsdn dark rmx - v202007102000 */
+/* obsdn dark rmx - v202008050050 */
 body {
-	font-size: 14px;
-	--font-monospace: 'Fira Code', monospace;
+  font-size: 15px;
+  font-family: Barlow, Cairo, Inter, sans-serif;
+   --font-monospace: 'Fira Code', Source Code Pro, monospace;
 }
 /* ======= DARK ==============*/
 .theme-dark {
@@ -29,7 +30,7 @@ body {
 	--scrollbar-active-thumb-bg: rgba(255,255,255,0.2);
 	--scrollbar-bg: rgba(255,255,255,0);
 	--scrollbar-thumb-bg: rgba(81,144,175,0.36);
-	--accent-strong: #ec0d0d;
+	--accent-strong: #ec0d0d; 
 }
 /* ======= LIGHT==============*/
 .theme-light {
@@ -67,9 +68,10 @@ body {
   --scrollbar-thumb-bg: rgb(0, 0, 0);
 	--accent-strong: #ff3333;
 }
-.theme-light pre[class*="language-"] {
-	background: #f0f2f5;
-	text-shadow: 0 0px white;
+/* code block remove shadow */
+.theme-light code[class*="language-"], .theme-light pre[class*="language-"] {
+	background: var(--background-primary-alt);
+	text-shadow: 0px 0px white;
 	font-family: var(--font-monospace);
 	text-align: left;
 	white-space: pre;
@@ -78,23 +80,28 @@ body {
 	word-wrap: normal;
 	line-height: 1.5;
 }
-.theme-light .token-operator {
+
+/* code block:remove white bg on operators */
+.theme-light .token.operator {
 	background: hsla(0,0%,100%,0);
 }
-/* code block:remove white bg on operators */
-/* ====== Tag Pills ======== */
-.tag {
-	background-color: var(--text-accent);
-	border: none;
-	color: white;
-	font-size: 11px;
-	padding: 1px 8px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	margin: 0px 0px;
-	cursor: pointer;
-	border-radius: 14px;
+
+/* ====== Tag Pills ======== */ 
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
+    content: '#';
+}
+.tag, div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end {
+  background-color: var(--text-accent);
+  border: none;
+  color: white !important;
+  font-size: 11px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
 }
 .tag:hover {
 	color: white;
@@ -231,6 +238,9 @@ svg.link {
 .workspace-ribbon.mod-left.is-collapsed {
     border-right-color: var(--background-secondary-alt);
 }
+.workspace-ribbon.mod-right.is-collapsed {
+    border-left-color: var(--background-secondary-alt);
+}
 /* ===== thinner & snappierhoriz resize handle =========*/
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
     bottom: 0;
@@ -269,18 +279,53 @@ svg.link {
 .nav-action-button > svg {
     width : 14px;
     height : 14px;
-    color : var(--text-accent);
 }
 .nav-action-button {
     color: var(--text-muted);
     padding: 0 20px 0 10px;
     cursor: pointer;
-}
+}  
 .nav-files-container {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+	flex-grow: 1;
+	overflow-y: auto;
+	padding-left: 7px; /* reduce to 0 for more space */
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+/* ----file xplor : smaller & bold vault title--- */
+.nav-folder.mod-root > .nav-folder-title {
+    padding-left: 6px;
+    font-size: 14px;
+    font-weight: bolder;
+    top:-6px;   /* higher */
+    cursor: default;
+}
+/*----file explorer smaller fonts & line height----*/
+.nav-file-title, .nav-folder-title {
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    border-radius: 0px;
+    padding: 1px 14px 0px 20px; 
+ }
+/*---- nav arrows adjust location ----*/
+.nav-folder-collapse-indicator {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    transition: transform 50ms linear 0s;
+}
+.nav-folder.is-collapsed .nav-folder-collapse-indicator {
+    transform: translateX(-4px) translateY(1px) rotate(-90deg);
 }
 /* ===== smaller view-actions icons ===== */
 .view-action > svg {
@@ -322,18 +367,56 @@ svg.link {
 	font-size: 14px;
 	font-weight: 600;
 }
-/* ===== tag pane ======*/
+/* ===== view header color ==========*/
+.workspace-leaf.mod-active .view-header-icon {
+    padding: 5px 10px;
+    color: var(--interactive-accent);
+    cursor: grab;
+    position: relative;
+    top: 2px;
+}
+.workspace-leaf.mod-active .view-header {
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--interactive-accent);
+}
+.view-header {
+    height: 36px;
+    display: flex;
+    border-top: 1px solid var(--background-secondary-alt);
+    border-bottom: 2px solid var(--background-secondary-alt);
+    background-color: var(--background-secondary-alt);
+    z-index: 1;
+}
+/* remove the gradient between title and icons */
+.workspace-leaf.mod-active .view-header-title-container:after {
+    background: var(--background-primary);
+}
+.view-header-title-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 32px;
+    background: var(--background-secondary-alt);
+	/*border-right: 1px solid var(--background-modifier-border);*/
+}
+/* ===== tag pane ===================*/
 .tag-pane-tag {
 	font-size: 11px;
+  line-height: 20px;
 }
 .tag-pane-tag-count {
-    top: 3px;
+    top: 2px;
     right: 10px;
     font-size: 11px;
     background-color: var(--background-secondary-alt);
     line-height: 12px;
     border-radius: 3px;
     padding: 2px 4px;
+}
+.pane-clickable-item {
+    padding: 0px 15px;
 }
 /*==== separators =====*/
 .workspace-leaf-resize-handle {
@@ -361,14 +444,16 @@ svg.link {
 	font-size: 14px;
 	color: var(--text-accent);
 	border-radius: 0px;
+	border-top: 1px solid var(--background-modifier-border);
+    padding: 6px 12px 0px 18px;
 }
-.search-result-file-matches {
+.search-result-file-match, .search-result-file-matches {
 	color: var(--text-muted);
 	font-size: 12px;
-	line-height: 20px;
-	margin-bottom: 5px;
-	padding: 2px 0;
-}
+	line-height: 18px;
+  padding: 2px 5px;
+  margin-bottom: 6px;
+} 
 .search-result-file-match:not(:first-child) {
 	margin-top: 0px;
 }
@@ -376,6 +461,12 @@ svg.link {
 	color: var(--text-normal);
 	background-color: var(--text-highlight-bg);
 }
+.search-info-more-matches {
+    color: var(--text-faint);
+    text-decoration: overline;
+    font-size: 10px;
+    line-height: 30px;
+}   /* the small text ... and XX matches */
 /*========= remove rounded corners =======*/
 .workspace-tab-header.is-active {
 	border-radius: 0px;
@@ -402,23 +493,791 @@ svg.link {
 	color: var(--text-accent);
 }
 /* ======= graph view ==============*/
-.graph-view.color-fill {
+/*.view-content iframe { background-image: url("https://filedn.com/locqGc5NIUyfrWR1S0M3dRz/screenshots/hpx1bg.jpg")
+; }*/
+
+.graph-view.color-fill {              
 	color: var(--accent-strong);
 /*var(--text-muted)if you want neutral color*/
+
 }
 .graph-view.color-circle {
 	color: var(--text-normal);
+
 }
 .graph-view.color-line {
 	color: var(--background-modifier-border);
 }
 .graph-view.color-text {
 	color: var(--text-normal);
+ 
 }
 .graph-view.color-fill-highlight {
 	color: var(--interactive-accent);
+
 }
 .graph-view.color-line-highlight {
 	color: rgb(var(--interactive-accent-rgb));
+
 }
-/*==== add mods below =====*/
+
+/*==== codemirror line numbers gutter edit mode ====*/
+.cm-s-obsidian .CodeMirror-linenumber {
+    color: var(--text-accent);
+    opacity : 0.3;
+    font-size: 14px;
+    font-family: Consolas,monospace;
+}
+.CodeMirror-gutter-elt {
+    position: absolute;
+    cursor: default;
+    z-index: 4;
+}
+.CodeMirror-linenumber {
+    padding: 0 3px 0 0px;
+    min-width: 20px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/*=============== add mods below ================*/
+/* Wrap long nav text and some paddings */
+.nav-file-title,
+.nav-folder-title {
+    white-space: normal;
+    width: auto;
+}
+
+/* Indent wrapped nav text */
+.nav-file-title-content {
+    margin-left: 10px;
+    text-indent: -10px;
+}
+
+/*=============== add mods below ================*/  
+
+    
+
+/*=============== add mods below ================*/     
+
+
+
+/*=============== add mods below ================*/     
+
+
+/*===============================================*/                                     
+/*                                    .__    .___*/
+/*  _____   ___________  _____ _____  |__| __| _/*/ 
+/* /     \_/ __ \_  __ \/     \\__  \ |  |/ __ | */ 
+/*|  Y Y  \  ___/|  | \/  Y Y  \/ __ \|  / /_/ | */ 
+/*|__|_|  /\___  >__|  |__|_|  (____  /__\____ | */ 
+/*      \/     \/            \/     \/        \/ */ 
+/*======== optionnal mermaid style below ========*/
+ 
+.label {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas, monospace !important;
+  color: var(--text-normal) !important;
+}
+
+.label text {
+  fill: var(--background-primary-alt) !important;
+}
+
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon,
+.node path {
+  fill: var(--background-modifier-border) !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 0.5px !important;
+}
+
+.node .label {
+  text-align: center !important;
+}
+
+.node.clickable {
+  cursor: pointer !important;
+}
+
+.arrowheadPath {
+  fill: var(--text-faint) !important;
+}
+
+.edgePath .path {
+  stroke: var(--text-faint) !important;
+  stroke-width: 1.5px !important;
+}
+
+.flowchart-link {
+  stroke: var(--text-faint)  !important;
+  fill: none !important;
+}
+
+.edgeLabel {
+  background-color: var(--background-primary) !important;
+  text-align: center !important;
+}
+.edgeLabel rect {
+  opacity: 0 !important;
+}
+
+.cluster rect {
+  fill: var(--background-primary-alt) !important;
+  stroke: var(--text-faint) !important;
+  stroke-width: 1px !important;
+}
+
+.cluster text {
+  fill: var(--background-primary) !important;
+}
+
+div.mermaidTooltip {
+  position: absolute !important;
+  text-align: center !important;
+  max-width: 200px !important;
+  padding: 2px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 10px !important;
+  background: var(--background-secondary) !important;
+  border: 1px solid var(--text-faint) !important;
+  border-radius: 2px !important;
+  pointer-events: none !important;
+  z-index: 100 !important;
+}
+/* Sequence Diagram variables */
+
+.actor {
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+text.actor > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.actor-line {
+  stroke: var(--text-muted) !important;
+}
+
+.messageLine0 {
+  stroke-width: 1.5 !important;
+  stroke-dasharray: none !important;
+  stroke: var(--text-muted) !important;
+}
+
+.messageLine1 {
+  stroke-width: 1.5 !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-muted) !important;
+}
+
+#arrowhead path {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.sequenceNumber {
+  fill: var(--background-primary) !important;
+}
+
+#sequencenumber {
+  fill: var(--text-muted) !important;
+}
+
+#crosshead path {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.messageText {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.labelBox {
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+.labelText, .labelText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.loopText, .loopText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.loopLine {
+  stroke-width: 2px !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
+}
+
+.note {
+  stroke: var(--text-normal) !important;
+  fill: var(--text-accent) !important;
+}
+
+.noteText, .noteText > tspan {
+  fill: var(--background-secondary-alt) !important;
+  stroke: none !important;
+}
+ /* Gantt chart variables */
+
+.activation0 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+.activation1 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+.activation2 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+/** Section styling */
+.mermaid-main-font {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.section {
+  stroke: none !important;
+  opacity: 0.2 !important;
+}
+
+.section0 {
+  fill: var(--text-faint) !important;
+}
+
+.section2 {
+  fill: var(--text-accent) !important;
+}
+
+.section1,
+.section3 {
+  fill: var(--text-normal) !important;
+  opacity: 0.2 !important;
+}
+
+.sectionTitle0 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle1 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle2 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle3 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle {
+  text-anchor: start !important;
+  font-size: 9px !important;
+  text-height: 14px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+/* Grid and axis */
+.grid .tick {
+  stroke: var(--text-muted) !important;
+  opacity: 0.2 !important;
+  shape-rendering: crispEdges !important;
+}
+.grid .tick text {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.grid path {
+  stroke-width: 0 !important;
+}
+
+/* Today line */
+.today {
+  fill: none !important;
+  stroke: var(--background-modifier-error) !important;
+  stroke-width: 2px !important;
+}
+
+/* Task styling */
+/* Default task */
+.task {
+  stroke-width: 0.5px !important;
+}
+
+.taskText {
+  text-anchor: middle !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.taskText:not([font-size]) {
+  font-size: 9px !important;
+}
+
+.taskTextOutsideRight {
+  fill: var(--text-normal)  !important;
+  text-anchor: start !important;
+  font-size: 9px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.taskTextOutsideLeft {
+  fill: var(--text-normal)  !important;
+  text-anchor: end !important;
+  font-size: 9px !important;
+}
+
+/* Special case clickable */
+.task.clickable {
+  cursor: pointer !important;
+}
+
+.taskText.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important !important;
+  font-weight: bold !important;
+}
+
+/* Specific task settings for the sections*/
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: var(--text-normal)  !important;
+}
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-muted)  !important;
+}
+
+.taskTextOutside0,
+.taskTextOutside2 {
+  fill: var(--text-muted) !important;
+}
+
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: var(--text-muted) !important;
+}
+
+/* Active task */
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted)  !important;
+}
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: var(--text-normal)  !important !important;
+}
+
+/* Completed task */
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: var(--text-muted) !important;
+  fill: var(--text-faint) !important;
+  stroke-width: 1 !important;
+}
+
+.doneText0,
+.doneText1,
+.doneText2,
+.doneText3 {
+  fill: var(--text-normal)  !important !important;
+}
+
+/* Tasks on the critical line */
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: var(--accent-strong)  !important;
+  fill: var(--accent-strong)  !important;
+  stroke-width: 1!important;
+}
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: var(--accent-strong)  !important;
+  fill: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-muted) !important;
+  stroke-width: 0.5 !important;
+  cursor: pointer !important;
+  shape-rendering: crispEdges !important;
+}
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8) !important;
+}
+
+.milestoneText {
+  font-style: italic !important;
+}
+
+.doneCritText0,
+.doneCritText1,
+.doneCritText2,
+.doneCritText3 {
+  fill: var(--text-normal)  !important !important;
+}
+
+.activeCritText0,
+.activeCritText1,
+.activeCritText2,
+.activeCritText3 {
+  fill: var(--text-normal)  !important !important;
+}
+
+.titleText {
+  text-anchor: middle !important;
+  font-size: 16px !important;
+  fill: var(--text-normal)  !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+g.classGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-family: consolas, monospace, Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 8px !important;
+}
+g.classGroup text .title {
+  font-weight: bolder !important;
+}
+
+g.clickable {
+  cursor: pointer !important;
+}
+
+g.classGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+}
+
+g.classGroup line {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.classLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.2 !important;
+}
+
+.classLabel .label {
+  fill: var(--text-accent) !important;
+  font-size: 10px !important;
+}
+
+.relation {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
+}
+
+.dashed-line {
+  stroke-dasharray: 3 !important;
+}
+
+#compositionStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#compositionEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#aggregationStart {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#aggregationEnd {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#dependencyStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#dependencyEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#extensionStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#extensionEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: var(--text-muted) !important;
+  color: var(--text-muted) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.pieTitleText {
+  text-anchor: middle !important;
+  font-size: 18px !important;
+  fill: var(--text-normal)  !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.slice {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;  
+ }
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+g.stateGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+}
+
+g.stateGroup line {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.transition {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
+}
+
+.stateGroup .composit {
+  fill: var(--text-normal) !important;
+  border-bottom: 1px !important;
+}
+
+.stateGroup .alt-composit {
+  fill: #e0e0e0 !important;
+  border-bottom: 1px !important;
+}
+
+.state-note {
+  stroke: var(--text-faint) !important;
+  fill: var(--text-accent) !important;
+}
+.state-note text {
+  fill: black !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+.stateLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.5 !important;
+}
+
+.stateLabel text {
+  fill: black !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.node circle.state-start {
+  fill: black !important;
+  stroke: black !important;
+}
+
+.node circle.state-end {
+  fill: black !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 1.5 !important;
+}
+
+#statediagram-barbEnd {
+  fill: var(--text-accent) !important;
+}
+
+.statediagram-cluster rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1px !important;
+}
+
+.statediagram-cluster rect.outer {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-state .divider {
+  stroke: var(--text-accent) !important;
+}
+
+.statediagram-state .title-state {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-cluster.statediagram-cluster .inner {
+  fill: var(--text-normal) !important;
+}
+
+.statediagram-cluster.statediagram-cluster-alt .inner {
+  fill: #e0e0e0 !important;
+}
+
+.statediagram-cluster .inner {
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+.statediagram-state rect.basic {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-state rect.divider {
+  stroke-dasharray: 10, 10 !important;
+  fill: #efefef !important;
+}
+
+.note-edge {
+  stroke-dasharray: 5 !important;
+}
+
+.statediagram-note rect {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted) !important;
+  stroke-width: 1px !important;
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+:root {
+  --mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
+  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+/* Classes common for multiple diagrams */
+.error-icon {
+  fill: var(--text-error) !important;
+}
+
+.error-text {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.edge-thickness-normal {
+  stroke-width: 1px !important;
+}
+
+.edge-thickness-thick {
+  stroke-width: 3px !important;
+}
+
+.edge-pattern-solid {
+  stroke-dasharray: 0 !important;
+}
+
+.edge-pattern-dashed {
+  stroke-dasharray: 3 !important;
+}
+
+.edge-pattern-dotted {
+  stroke-dasharray: 2 !important;
+}
+
+.marker {
+  fill: var(--text-muted) !important;
+}
+
+.marker.cross {
+  stroke: var(--text-muted) !important;
+}
+
+rect {
+    fill: var(--text-accent-hover);
+    fill-opacity: 1;
+    stroke: var(--text-normal);
+}
