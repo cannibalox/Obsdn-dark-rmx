@@ -533,6 +533,26 @@ svg.link {
     text-align: right;
     white-space: nowrap;
 }
+/*============bigger link popup preview  ================*/
+.popover.hover-popover {
+    position: absolute;
+    z-index: var(--layer-popover);
+    transform: scale(0.8);
+    max-height: 800px;    /* was 300 */
+    min-height: 100px;
+    width: 500px;
+    overflow: hidden;      
+    padding: 0;
+    border-bottom: none;
+}
+.popover {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-primary-alt);
+    box-shadow: 3px 3px 7px var(--background-modifier-box-shadow);
+    border-radius: 6px;
+    padding: 15px 20px 10px 20px;
+    position: relative;
+}
 
 /*=============== add mods below ================*/
 /* Wrap long nav text and some paddings */
