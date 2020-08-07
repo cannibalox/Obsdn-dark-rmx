@@ -87,10 +87,7 @@ body {
 }
 
 /* ====== Tag Pills ======== */ 
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
-    content: '#';
-}
-.tag, div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end {
+ .tag {
   background-color: var(--text-accent);
   border: none;
   color: white !important;
@@ -452,7 +449,7 @@ svg.link {
 	font-size: 12px;
 	line-height: 18px;
   padding: 2px 5px;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 } 
 .search-result-file-match:not(:first-child) {
 	margin-top: 0px;
@@ -493,9 +490,6 @@ svg.link {
 	color: var(--text-accent);
 }
 /* ======= graph view ==============*/
-/*.view-content iframe { background-image: url("https://filedn.com/locqGc5NIUyfrWR1S0M3dRz/screenshots/hpx1bg.jpg")
-; }*/
-
 .graph-view.color-fill {              
 	color: var(--accent-strong);
 /*var(--text-muted)if you want neutral color*/
