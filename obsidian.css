@@ -1,271 +1,288 @@
-/* obsdn dark rmx - v202008071640 */
+/* obsdn dark rmx - v202008260347 - by _ph / www.hpx1.com*/
+/* latin */
 
 body {
-    font-size: 15px;
-    font-family: Barlow, Cairo, Inter, sans-serif;
-    --font-monospace: 'Fira Code', Source Code Pro, monospace;
+  font-size: 15px;
+  font-family: Barlow, Cairo, Inter, sans-serif;
+  --font-monospace: Fira Code, Source Code Pro, monospace;
 }
-
+.CodeMirror pre.CodeMirror-line {
+  font-size: 13px;
+  font-family: Fira Code, Source Code Pro, monospace;
+}
 
 /* ======= DARK ==============*/
 
 .theme-dark {
-    --background-primary: #212121;
-    --background-modifier-border: #303030;
-    --background-primary-alt: #171717;
-    --background-secondary: #212121;
-    --background-secondary-alt: #000000;
-    --background-modifier-box-shadow: rgba(0, 0, 0, 0.85);
-    --text-accent: #3e93d8;
-    --text-accent-hover: #2b60af;
-    --text-normal: #dcddde;
-    --text-muted: #999;
-    --text-faint: #666;
-    --text-error: #ff3333;
-    --text-error-hover: #990000;
-    --text-matched: #0cf32b;
-    --text-on-accent: #dcddde;
-    --text-selection: rgba(6, 66, 113, 0.99);
-    --text-highlight-bg: rgba(26, 73, 100, 0.66);
-    --interactive-normal: #2a2a2a;
-    --interactive-hover: #303030;
-    --interactive-accent: rgb(32, 171, 233);
-    --interactive-accent-rgb: 32, 171, 233;
-    --interactive-accent-hover: #1da3d6;
-    --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
-    --scrollbar-bg: rgba(255, 255, 255, 0);
-    --scrollbar-thumb-bg: rgba(81, 144, 175, 0.36);
-    --accent-strong: #ec0d0d;
+  --background-primary: #212121;
+  --background-modifier-border: #303030;
+  --background-primary-alt: #171717;
+  --background-secondary: #212121;
+  --background-secondary-alt: #000000;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.85);
+  --text-accent: #3e93d8;
+  --text-accent-hover: #2b60af;
+  --text-normal: #dcddde;
+  --text-muted: #999;
+  --text-faint: #666;
+  --text-error: #ff3333;
+  --text-error-hover: #990000;
+  --text-matched: #0cf32b;
+  --text-on-accent: #dcddde;
+  --text-selection: rgba(6, 66, 113, 0.99);
+  --text-highlight-bg: rgba(26, 73, 100, 0.66);
+  --interactive-normal: #2a2a2a;
+  --interactive-hover: #303030;
+  --interactive-accent: rgb(32, 171, 233);
+  --interactive-accent-rgb: 32, 171, 233;
+  --interactive-accent-hover: #1da3d6;
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+  --scrollbar-bg: rgba(255, 255, 255, 0);
+  --scrollbar-thumb-bg: rgba(81, 144, 175, 0.36);
+  --accent-strong: #ec0d0d;
+  --accent-mild: #e6b64f;
+  --bw: #ffffff;
 }
-
 
 /* ======= LIGHT==============*/
 
 .theme-light {
-    --background-primary: #ffffff;
-    --background-primary-alt: #f0f2f5;
-    --background-secondary: #f2f3f5;
-    --background-secondary-alt: #e3e5e8;
-    --background-accent: #fff;
-    --background-modifier-border: #ddd;
-    --background-modifier-form-field: #fff;
-    --background-modifier-form-field-highlighted: #fff;
-    --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-    --background-modifier-success: #A4E7C3;
-    --background-modifier-error: #e68787;
-    --background-modifier-error-rgb: 230, 135, 135;
-    --background-modifier-error-hover: #FF9494;
-    --background-modifier-cover: rgba(0, 0, 0, 0.8);
-    --text-accent: #269dff;
-    --text-accent-hover: #2da4ff;
-    --text-normal: #2e3338;
-    --text-muted: #6e6e6e;
-    --text-faint: #999999;
-    --text-error: #ce2222;
-    --text-error-hover: #cb2c2;
-    --text-highlight-bg: rgba(240, 255, 82, 0.76);
-    --text-selection: rgba(134, 202, 255, 0.99);
-    --text-on-accent: #f2f2f2;
-    --text-matched: #000000;
-    --interactive-normal: #f2f3f5;
-    --interactive-hover: #e9e9e9;
-    --interactive-accent: rgb(34, 182, 226);
-    --interactive-accent-rgb: 34, 182, 226;
-    --interactive-accent-hover: #1da3d6;
-    --scrollbar-active-thumb-bg: rgb(97, 170, 221);
-    --scrollbar-bg: rgba(0, 0, 0, 0);
-    --scrollbar-thumb-bg: rgb(0, 0, 0);
-    --accent-strong: #ff3333;
+  --background-primary: #ffffff;
+  --background-primary-alt: #f0f2f5;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --background-accent: #fff;
+  --background-modifier-border: #ddd;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #a4e7c3;
+  --background-modifier-error: #e68787;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #ff9494;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #269dff;
+  --text-accent-hover: #2da4ff;
+  --text-normal: #2e3338;
+  --text-muted: #6e6e6e;
+  --text-faint: #999999;
+  --text-error: #ce2222;
+  --text-error-hover: #cb2c2;
+  --text-highlight-bg: rgba(240, 255, 82, 0.76);
+  --text-selection: rgba(134, 202, 255, 0.99);
+  --text-on-accent: #f2f2f2;
+  --text-matched: #000000;
+  --interactive-normal: #f2f3f5;
+  --interactive-hover: #e9e9e9;
+  --interactive-accent: rgb(34, 182, 226);
+  --interactive-accent-rgb: 34, 182, 226;
+  --interactive-accent-hover: #1da3d6;
+  --scrollbar-active-thumb-bg: rgb(97, 170, 221);
+  --scrollbar-bg: rgba(0, 0, 0, 0);
+  --scrollbar-thumb-bg: rgb(0, 0, 0);
+  --accent-strong: #ff3333;
+  --accent-mild: #e0a330;
+  --bw: #000000;
 }
-
 
 /* code block remove shadow */
 
 .theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
-    background: var(--background-primary-alt);
-    text-shadow: 0px 0px white;
-    font-family: var(--font-monospace);
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
+  background: var(--background-primary-alt);
+  text-shadow: 0px 0px white;
+  font-family: var(--font-monospace);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
 }
-
 
 /* code block:remove white bg on operators */
 
 .theme-light .token.operator {
-    background: hsla(0, 0%, 100%, 0);
+  background: hsla(0, 0%, 100%, 0);
 }
-
 
 /* ====== Tag Pills ======== */
 
 .tag {
-    background-color: var(--text-accent);
-    border: none;
-    color: white !important;
-    font-size: 11px;
-    padding: 0px 8px 1px;
-    text-align: center;
-    text-decoration: none !important;
-    display: inline-block;
-    margin: 0px 0px;
-    cursor: pointer;
-    border-radius: 14px;
+  background-color: var(--text-accent);
+  border: none;
+  color: white !important;
+  font-size: 11px;
+  line-height: 1.6em;
+  padding: 0px 7px 1px 7px;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  margin: 0px 4px;
+  cursor: pointer;
+  border-radius: 14px;
 }
 
 .tag:hover {
-    color: white;
-    background-color: var(--text-accent-hover);
+  color: white;
+  background-color: var(--text-accent-hover);
 }
 
 .tag[href^="#obsidian"] {
-    background-color: #4d3ca6;
+  background-color: #4d3ca6;
 }
 
 .tag[href^="#important"] {
-    background-color: red;
+  background-color: red;
 }
 
 .tag[href^="#complete"] {
-    background-color: green;
+  background-color: green;
 }
 
 .tag[href^="#inprogress"] {
-    background-color: orange;
+  background-color: orange;
 }
-
 
 /*=== trace indentation lines by death_au === */
 
 .cm-hmd-list-indent .cm-tab,
 ul ul {
-    position: relative;
+  position: relative;
 }
 
 .cm-hmd-list-indent .cm-tab::before,
 ul ul::before {
-    content: '';
-    border-left: 2px solid var(--background-modifier-border);
-    /*rgba(20,122,255,0.3);
+  content: "";
+  border-left: 2px solid var(--background-modifier-border);
+  /*rgba(20,122,255,0.3);
 */
-    position: absolute;
+  position: absolute;
 }
 
 .cm-hmd-list-indent .cm-tab::before {
-    left: 0;
-    top: -5px;
-    bottom: -4px;
+  left: 0;
+  top: -5px;
+  bottom: -4px;
 }
 
 ul ul::before {
-    left: -15px;
-    top: 0;
-    bottom: 0;
+  left: -15px;
+  top: 0;
+  bottom: 0;
 }
-
 
 /*==============TRANSCLUSION TWEAKS=============*/
 
 .markdown-embed-title {
-    font-family: sans-serif;
-    font-size: 10px;
-    color: var(--text-accent);
-    /*rgb(150,200,255);
-*/
-    line-height: 10px;
-    width: 100%;
-    text-align: left;
-    font-weight: 100;
-    margin: -4px 0px;
+  font-family: sans-serif;
+  font-size: 10px;
+  color: var(--text-accent);
+  line-height: 10px;
+  width: 100%;
+  text-align: left;
+  font-weight: 100;
+  margin: -4px 0px;
 }
 
 .markdown-preview-view .markdown-embed {
-    background-color: var(--background-primary);
-    border-radius: 0px;
-    border: 0;
-    border-left: 1px solid var(--text-selection);
-    margin: 0px -20px;
+  background-color: var(--background-primary);
+  border-radius: 0px;
+  border: 0;
+  border-left: 1px solid var(--text-selection);
+  margin: 0px -20px;
 }
 
 .markdown-embed {
-    display: block;
-    top: 0px;
+  display: block;
+  top: 0px;
 }
 
-.markdown-embed>.markdown-embed-content {
-    display: inline;
-    max-height: 100%;
-    max-width: 100%;
-    margin: -25px 0px -15px 0px;
-    padding: 0px 0px 5px 0px;
+.markdown-embed > .markdown-embed-content {
+  display: inline;
+  max-height: 100%;
+  max-width: 100%;
+  margin: -25px 0px -15px 0px;
+  padding: 0px 0px 5px 0px;
 }
 
-.markdown-embed-content>* {
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-    margin: 10px 0px 5px 0px;
+.markdown-embed-content > * {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10px 0px 5px 0px;
 }
 
 .markdown-embed-link {
-    top: -3px;
-    left: -20px;
-    color: var(--accent-strong);
-    cursor: pointer;
-    position: absolute;
+  top: -3px;
+  left: -20px;
+  color: var(--accent-strong);
+  cursor: pointer;
+  position: absolute;
 }
 
 svg.link {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 }
 
 .file-embed-link {
-    top: 10px;
-    left: -10px;
-    color: var(--accent-strong);
-    cursor: pointer;
-    position: relative;
+  top: 10px;
+  left: -10px;
+  color: var(--accent-strong);
+  cursor: pointer;
+  position: relative;
 }
 
 .internal-embed,
-.internal-embed>.markdown-embed>.markdown-embed-content {
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-    left: 0px;
+.internal-embed > .markdown-embed > .markdown-embed-content {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  left: 0px;
 }
 
 .markdown-preview-view .file-embed {
-    background-color: var(--background-primary);
-    border-radius: 4px;
-    border: 2px solid var(--text-selection);
-    padding: 5px 20px 5px 20px;
-    margin: 10px 0px 10px 0px;
+  background-color: var(--background-primary);
+  border-radius: 4px;
+  border: 2px solid var(--text-selection);
+  padding: 5px 20px 5px 20px;
+  margin: 10px 0px 10px 0px;
 }
 
 .file-embed-title {
-    font-size: 12px;
-    height: 40px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  font-size: 12px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
+/* ==========headings=======*/
+.markdown-preview-view h1 {
+  font-size: 34px;
+  line-height: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--text-accent);
+}
+.markdown-preview-view h2 {
+  font-size: 26px;
+  line-height: 36px;
+  padding-top: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--text-faint);
+}
+
+/* ==========hr======*/
+.markdown-preview-view hr {
+  height: 1px;
+  border: none;
+  background-color: var(--text-accent);
+}
 
 /* ===========================*/
-
-
 /* ====== GUI tweaks =========*/
-
-
 /* ===========================*/
-
 
 /* ===== snappier animations ==== */
 
@@ -273,527 +290,636 @@ svg.link {
 .workspace-tab-header-inner,
 .workspace-tab-container-before,
 .workspace-tab-container-after {
-    transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
-
 
 /* =====  ribbon vertical =========*/
 
 .workspace-ribbon-collapse-btn {
-    margin-top: 0px;
-    padding: 10px 6px 4px 6px;
-    cursor: pointer;
-    color: var(--text-faint);
-    transform: none;
-    transition: transform 100ms ease-in-out;
+  margin-top: 0px;
+  padding: 10px 6px 4px 6px;
+  cursor: pointer;
+  color: var(--text-faint);
+  transform: none;
+  transition: transform 100ms ease-in-out;
 }
 
 .workspace-ribbon.is-collapsed {
-    background-color: var(--background-secondary-alt);
+  background-color: var(--background-secondary-alt);
 }
 
 .workspace-ribbon.mod-left.is-collapsed {
-    border-right-color: var(--background-secondary-alt);
+  border-right-color: var(--background-secondary-alt);
 }
 
 .workspace-ribbon.mod-right.is-collapsed {
-    border-left-color: var(--background-secondary-alt);
+  border-left-color: var(--background-secondary-alt);
 }
 
+/* ===== thinner & snappier horiz resize handle =========*/
 
-/* ===== thinner & snappierhoriz resize handle =========*/
-
-.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle {
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    cursor: row-resize;
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  cursor: row-resize;
 }
 
 .workspace-leaf-resize-handle {
-    transition: background-color 80ms linear;
+  transition: background-color 80ms linear;
 }
-
 
 /* ==== align top tab header with header title ==== */
 
 .workspace-tab-header-container {
-    display: flex;
-    background-color: var(--background-secondary-alt);
-    height: 36px;
-    padding-top: 1px;
+  display: flex;
+  background-color: var(--background-secondary-alt);
+  height: 36px;
+  padding-top: 1px;
 }
-
 
 /* =====  left sidebar =========*/
 
 .workspace-tab-header-container {
-    display: flex;
-    background-color: var(--background-secondary-alt);
-    height: 36px;
-    /* aligh tab header */
-    padding-top: 1px;
+  display: flex;
+  background-color: var(--background-secondary-alt);
+  height: 36px; /* aligh tab header */
+  padding-top: 1px;
 }
 
 .nav-header {
-    padding: 10px 10px 4px 8px;
+  padding: 10px 10px 4px 8px;
 }
 
 .nav-buttons-container {
-    display: flex;
-    justify-content: left;
-    padding-bottom: 2px;
-    border-bottom: 1px solid var(--background-modifier-border);
-    margin-bottom: 2px;
+  display: flex;
+  justify-content: left;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  margin-bottom: 2px;
 }
 
-.nav-action-button>svg {
-    width: 14px;
-    height: 14px;
+.nav-action-button > svg {
+  width: 14px;
+  height: 14px;
 }
 
 .nav-action-button {
-    color: var(--text-muted);
-    padding: 0 20px 0 10px;
-    cursor: pointer;
+  color: var(--text-muted);
+  padding: 0 20px 0 10px;
+  cursor: pointer;
 }
 
 .nav-files-container {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-left: 7px;
-    /* reduce to 0 for more space */
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-left: 7px;  /* reduce to 0 for more space */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 
 /* ----file xplor : smaller & bold vault title--- */
 
-.nav-folder.mod-root>.nav-folder-title {
-    padding-left: 6px;
-    font-size: 14px;
-    font-weight: bolder;
-    top: -6px;
-    /* higher */
-    cursor: default;
+.nav-folder.mod-root > .nav-folder-title {
+  padding-left: 6px;
+  font-size: 14px;
+  font-weight: bolder;
+  top: -6px; /* higher */
+  cursor: default;
 }
-
 
 /*----file explorer smaller fonts & line height----*/
 
 .nav-file-title,
 .nav-folder-title {
-    font-size: 12px;
-    line-height: 14px;
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent;
-    border-image: initial;
-    border-radius: 0px;
-    padding: 1px 14px 0px 20px;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 0px;
+  padding: 1px 14px 0px 20px;
 }
 
+.nav-file-tag {
+  background-color: var(--background-secondary-alt);
+  top: -1px;
+}
+
+/*-------search pane---------*/
+input[type="text"],
+input[type="email"],
+input[type="password"], 
+input[type="number"] {
+  font-family: Barlow, Cairo, 'Inter', sans-serif;
+  padding: 5px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.search-input {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: calc(100% - 20px);
+}
 
 /*---- nav arrows adjust location ----*/
 
 .nav-folder-collapse-indicator {
-    position: absolute;
-    left: 12px;
-    top: 4px;
-    width: 9px;
-    height: 9px;
-    transition: transform 50ms linear 0s;
+  position: absolute;
+  left: 12px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  transition: transform 50ms linear 0s;
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-    transform: translateX(-4px) translateY(1px) rotate(-90deg);
+  transform: translateX(-4px) translateY(1px) rotate(-90deg);
 }
-
 
 /* ===== smaller view-actions icons ===== */
 
-.view-action>svg {
-    width: 14px;
-    height: 14px;
+.view-action > svg {
+  width: 14px;
+  height: 14px;
 }
 
-.view-header-icon>svg {
-    width: 14px;
-    height: 14px;
+.view-header-icon > svg {
+  width: 14px;
+  height: 14px;
 }
 
-.workspace-tab-header-inner-icon>svg {
-    width: 14px;
-    height: 14px;
+.workspace-tab-header-inner-icon > svg {
+  width: 14px;
+  height: 14px;
 }
-
 
 /* ===== brings back the selection highlight - thanks Klaas! ==== */
 
 .suggestion-item.is-selected {
-    background-color: var(--text-accent);
+  background-color: var(--text-accent);
 }
-
 
 /* ====== scrollbars:no rounded corners =========*/
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0px;
+  -webkit-border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    -webkit-border-radius: 0px;
+  -webkit-border-radius: 0px;
 }
-
 
 /*==== tabs =====*/
 
 .workspace-tab-header-inner {
-    padding: 9px 20px;
-    height: 100%;
-    display: flex;
+  padding: 9px 20px;
+  height: 100%;
+  display: flex;
 }
 
 .workspace-tab-container-before,
 .workspace-tab-container-after {
-    width: 0px;
-    height: 100%;
+  width: 0px;
+  height: 100%;
 }
-
 
 /* ====== font size headers =========*/
 
 .view-header-title {
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 }
-
 
 /* ===== view header color ==========*/
 
 .workspace-leaf.mod-active .view-header-icon {
-    padding: 5px 10px;
-    color: var(--interactive-accent);
-    cursor: grab;
-    position: relative;
-    top: 2px;
+  padding: 5px 10px;
+  color: var(--interactive-accent);
+  cursor: grab;
+  position: relative;
+  top: 2px;
 }
 
 .workspace-leaf.mod-active .view-header {
-    background-color: var(--background-primary);
-    border-bottom: 2px solid var(--interactive-accent);
+  background-color: var(--background-primary);
+  border-bottom: 2px solid var(--interactive-accent);
 }
 
 .view-header {
-    height: 36px;
-    display: flex;
-    border-top: 1px solid var(--background-secondary-alt);
-    border-bottom: 2px solid var(--background-secondary-alt);
-    background-color: var(--background-secondary-alt);
-    z-index: 1;
+  height: 36px;
+  display: flex;
+  border-top: 1px solid var(--background-secondary-alt);
+  border-bottom: 2px solid var(--background-secondary-alt);
+  background-color: var(--background-secondary-alt);
+  z-index: 1;
 }
-
 
 /* remove the gradient between title and icons */
 
 .workspace-leaf.mod-active .view-header-title-container:after {
-    background: var(--background-primary);
+  background: var(--background-primary);
 }
 
 .view-header-title-container:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 32px;
-    background: var(--background-secondary-alt);
-    /*border-right: 1px solid var(--background-modifier-border);*/
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 32px;
+  background: var(--background-secondary-alt);
+  /*border-right: 1px solid var(--background-modifier-border);*/
 }
-
 
 /* ===== tag pane ===================*/
 
 .tag-pane-tag {
-    font-size: 11px;
-    line-height: 20px;
+  font-size: 11px;
+  line-height: 20px;
 }
 
 .tag-pane-tag-count {
-    top: 2px;
-    right: 10px;
-    font-size: 11px;
-    background-color: var(--background-secondary-alt);
-    line-height: 12px;
-    border-radius: 3px;
-    padding: 2px 4px;
+  top: 2px;
+  right: 10px;
+  font-size: 11px;
+  background-color: var(--background-secondary-alt);
+  line-height: 12px;
+  border-radius: 3px;
+  padding: 2px 4px;
 }
 
 .pane-clickable-item {
-    padding: 0px 15px;
+  padding: 0px 15px;
 }
-
 
 /*==== separators =====*/
 
 .workspace-leaf-resize-handle {
-    background-color: var(--background-secondary-alt);
+  background-color: var(--background-secondary-alt);
 }
 
 .workspace-leaf-resize-handle:hover {
-    background-color: rgba(var(--interactive-accent-rgb), .8);
+  background-color: rgba(var(--interactive-accent-rgb), 0.8);
 }
-
 
 /* a bit more padding on the left side */
 
 .markdown-preview-view {
-    padding: 20px 30px 30px 45px;
+  padding: 20px 30px 30px 45px;
 }
-
 
 /*===== backlink pane smaller fonts=======*/
 
 .side-dock-collapsible-section-header {
-    font-size: 12px;
-    padding: 3px 14px 0 34px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+  font-size: 12px;
+  padding: 4px 14px 0 22px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 }
-
+.side-dock-collapsible-section-header.is-collapsed .side-dock-collapsible-section-header-indicator {
+  transform: translateX(-9px) translateY(7px) rotate(-90deg);
+}
 .search-result-container {
-    padding: 0px 4px 4px 4px;
+  padding: 0px 4px 4px 4px;
 }
 
 .search-result-file-title {
-    font-size: 14px;
-    color: var(--text-accent);
-    border-radius: 0px;
-    border-top: 1px solid var(--background-modifier-border);
-    padding: 6px 12px 0px 18px;
+  font-size: 14px;
+  color: var(--text-accent);
+  border-radius: 0px;
+  border-top: 1px solid var(--background-modifier-border);*/
+  padding: 2px 12px 0px 18px;
 }
 
-.search-result-file-match,
 .search-result-file-matches {
-    color: var(--text-muted);
-    font-size: 12px;
-    line-height: 18px;
-    padding: 2px 5px;
-    margin-bottom: 3px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 0px;
+  margin-bottom: -6px;
+  border-bottom: 0px;
+}
+.search-result-file-match{
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 0px;
+  margin-bottom: 4px;
+  border-bottom: 0px;
 }
 
 .search-result-file-match:not(:first-child) {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 .search-result-file-matched-text {
-    color: var(--text-matched);
-    background-color: var(--text-highlight-bg);
+  color: var(--text-matched);
+  background-color: var(--text-highlight-bg);
 }
 
 .search-info-more-matches {
-    color: var(--text-faint);
-    text-decoration: overline;
-    font-size: 10px;
-    line-height: 30px;
+  color: var(--text-faint);
+  text-decoration: overline;
+  font-size: 10px;
+  line-height: 16px;
 }
 
-
+.search-empty-state {
+    color: var(--text-error);
+    font-size: 12px;
+    margin: 0 20px 15px 20px;
+}
 /* the small text ... and XX matches */
-
 
 /*========= remove rounded corners =======*/
 
 .workspace-tab-header.is-active {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .nav-folder-title {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-    border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-    border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-    border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
 }
-
 
 /*======= flat status bar ====*/
 
 .status-bar {
-    background-color: var(--background-secondary-alt);
-    border-top: 0px solid var(--background-modifier-border);
-    color: var(--text-accent);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px solid var(--background-modifier-border);
+  color: var(--text-accent);
 }
-
 
 /* ======= graph view ==============*/
 
 .graph-view.color-fill {
-    color: var(--accent-strong);
-    /*var(--text-muted)if you want neutral color*/
+  color: var(--accent-strong);
+  /*var(--text-muted)if you want neutral color*/
 }
 
 .graph-view.color-circle {
-    color: var(--text-normal);
+  color: var(--text-normal);
 }
 
 .graph-view.color-line {
-    color: var(--background-modifier-border);
+  color: var(--background-modifier-border);
 }
 
 .graph-view.color-text {
-    color: var(--text-normal);
+  color: var(--text-normal);
 }
 
 .graph-view.color-fill-highlight {
-    color: var(--interactive-accent);
+  color: var(--interactive-accent);
 }
 
 .graph-view.color-line-highlight {
-    color: rgb(var(--interactive-accent-rgb));
+  color: rgb(var(--interactive-accent-rgb));
 }
-
 
 /*==== codemirror line numbers gutter edit mode ====*/
 
 .cm-s-obsidian .CodeMirror-linenumber {
-    color: var(--text-accent);
-    opacity: 0.3;
-    font-size: 14px;
-    font-family: Consolas, monospace;
+  color: var(--text-accent);
+  opacity: 0.3;
+  font-size: 14px;
+  font-family: Consolas, monospace;
 }
 
 .CodeMirror-gutter-elt {
-    position: absolute;
-    cursor: default;
-    z-index: 4;
+  position: absolute;
+  cursor: default;
+  z-index: 4;
 }
 
 .CodeMirror-linenumber {
-    padding: 0 3px 0 0px;
-    min-width: 20px;
-    text-align: right;
-    white-space: nowrap;
+  padding: 0 3px 0 0px;
+  min-width: 20px;
+  text-align: right;
+  white-space: nowrap;
 }
 
+/* === show margins in editor mode === */
+.CodeMirror-lines {
+  border-right: 1px solid var(--background-secondary);
+  border-left: 1px solid var(--background-secondary);
+}
 
 /*============bigger link popup preview  ================*/
 
 .popover.hover-popover {
-    position: absolute;
-    z-index: var(--layer-popover);
-    transform: scale(0.8);
-    max-height: 800px;
-    /* was 300 */
-    min-height: 100px;
-    width: 500px;
-    overflow: hidden;
-    padding: 0;
-    border-bottom: none;
+  position: absolute;
+  z-index: var(--layer-popover);
+  transform: scale(0.85);
+  max-height: 800px; /* was 300 */
+  min-height: 100px;
+  width: 500px;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: none;
 }
 
 .popover {
-    background-color: var(--background-primary);
-    border: 1px solid var(--background-primary-alt);
-    box-shadow: 3px 3px 7px var(--background-modifier-box-shadow);
-    border-radius: 6px;
-    padding: 15px 20px 10px 20px;
-    position: relative;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-primary-alt);
+  box-shadow: 3px 3px 7px var(--background-modifier-box-shadow);
+  border-radius: 6px;
+  padding: 15px 20px 10px 20px;
+  position: relative;
+  font-weight: 500;
+  -webkit-text-stroke: 0.2px;
+  -webkit-font-smoothing: none;
+  color:var(--bw);
 }
-
+/* --- the bottom gradient ---*/
+.popover.hover-popover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0px; /* 50px */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--background-primary) 80%,
+    var(--background-primary)
+  );
+}
 
 /* =========== footnotes ========= */
 
 .markdown-preview-view .mod-highlighted {
-    transition: background-color 1s ease;
-    background-color: var(--text-highlight-bg);
-    color: var(--text-matched);
+  transition: background-color 1s ease;
+  background-color: var(--text-highlight-bg);
+  color: var(--text-matched);
 }
 
-.footnotes-list {
-    font-size: 12px
+.footnotes {
+  text-align: justify;
+  hyphens: auto;
+  font-size: 12px;
 }
 
+sup {
+  vertical-align: top;
+  font-size: 11px;
+  display: inline-block;
+  position: relative;
+  margin: -4px 0 0 3px;
+}
+sub {
+  vertical-align: bottom;
+  font-size: 11px;
+  display: inline-block;
+  position: relative;
+  margin: 0px 0 -4px 3px;
+}
+/* =========== quote block ========= */
+/* Add quotation character before quote */
+blockquote.rq:before {
+  font: Barlow;
+  content: "\02033"; /* \275D \0022 \02033 \02DD \201F \201D \030B \02BA*/
+  font-size: 5em;
+  color: var(--text-accent);
+  vertical-align: -0.1em;
+  line-height: 2px;
+  padding: 20px 10px 0 0px;
+  float: left;
+}
+blockquote.rq:after {
+  font: Barlow;
+  content: "\02033"; /* \275D \0022 \02033 \02DD \201F \201D \030B \02BA*/
+  font-size: 5em;
+  color: var(--text-accent);
+  float: right;
+  padding: 16px 0px 0 10px;
+}
+.markdown-preview-view blockquote {
+  border-radius: 0;
+  border: 0px solid var(--background-modifier-border);
+  background-color: var(--background-primary-alt);
+  border-left: 5px solid var(--accent-strong);
+  padding: 14px 10px 10px 10px;
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+  margin-inline-start: 20px;
+  margin-inline-end: 80px;
+  text-align: justify;
+  hyphens: auto;
+}
+.markdown-preview-view blockquote.rq {
+  border-left: 5px solid var(--text-accent);
+  border-radius: 0;
+  border: 0px solid var(--background-modifier-border);
+  background-color: var(--background-primary-alt);
+  border-left: 5px solid var(--text-accent);
+  padding: 14px 22px 14px 22px;
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+  margin-inline-start: 20px;
+  margin-inline-end: 80px;
+  text-align: justify;
+  hyphens: auto;
+}
+blockquote.mild {
+  border-left: 5px solid var(--accent-mild);
+  padding: 14px 22px 14px 22px;
+}
 
+/*=============== lists bullets ================*/
+ul {
+  list-style-type: disc;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+/*=============== add mods below ================*/
+/*=============== add mods below ================*/
 /*=============== add mods below ================*/
 
+/*----file explorer column view : slightly buggy ----*/
+.nav-folder-children {
+  column-width:200px;
+  column-rule: 1px solid var(--background-modifier-border);
+}
 
 /* Wrap long nav text and some paddings */
-
 .nav-file-title,
 .nav-folder-title {
-    white-space: normal;
-    width: auto;
+  white-space: normal;
+  width: auto;
 }
-
 
 /* Indent wrapped nav text */
-
 .nav-file-title-content {
-    margin-left: 10px;
-    text-indent: -10px;
+  margin-left: 10px;
+  text-indent: -10px;
 }
 
+/* Justify preview text */
+.markdown-preview-view p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* reduce size of embedded files */
+.markdown-preview-view img, .markdown-preview-view audio, .markdown-preview-view video {
+  max-width: max(500px, 60%);
+  outline: none;
+}
+/*=============== add mods below ================*/
 
 /*=============== add mods below ================*/
 
-
 /*=============== add mods below ================*/
-
-
-/*=============== add mods below ================*/
-
 
 /*===============================================*/
-
-
 /*                                    .__    .___*/
-
-
 /*  _____   ___________  _____ _____  |__| __| _/*/
-
-
 /* /     \_/ __ \_  __ \/     \\__  \ |  |/ __ | */
-
-
 /*|  Y Y  \  ___/|  | \/  Y Y  \/ __ \|  / /_/ | */
-
-
 /*|__|_|  /\___  >__|  |__|_|  (____  /__\____ | */
-
-
 /*      \/     \/            \/     \/        \/ */
-
-
 /*======== optionnal mermaid style below ========*/
 
 .label {
-    font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas, monospace !important;
-    color: var(--text-normal) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas,
+    monospace !important;
+  color: var(--text-normal) !important;
 }
 
 .label text {
-    fill: var(--background-primary-alt) !important;
+  fill: var(--background-primary-alt) !important;
 }
 
 .node rect,
@@ -801,303 +927,294 @@ svg.link {
 .node ellipse,
 .node polygon,
 .node path {
-    fill: var(--background-modifier-border) !important;
-    stroke: var(--text-normal) !important;
-    stroke-width: 0.5px !important;
+  fill: var(--background-modifier-border) !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 0.5px !important;
 }
 
 .node .label {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .node.clickable {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 .arrowheadPath {
-    fill: var(--text-faint) !important;
+  fill: var(--text-faint) !important;
 }
 
 .edgePath .path {
-    stroke: var(--text-faint) !important;
-    stroke-width: 1.5px !important;
+  stroke: var(--text-faint) !important;
+  stroke-width: 1.5px !important;
 }
 
 .flowchart-link {
-    stroke: var(--text-faint) !important;
-    fill: none !important;
+  stroke: var(--text-faint) !important;
+  fill: none !important;
 }
 
 .edgeLabel {
-    background-color: var(--background-primary) !important;
-    text-align: center !important;
+  background-color: var(--background-primary) !important;
+  text-align: center !important;
 }
 
 .edgeLabel rect {
-    opacity: 0 !important;
+  opacity: 0 !important;
 }
 
 .cluster rect {
-    fill: var(--background-primary-alt) !important;
-    stroke: var(--text-faint) !important;
-    stroke-width: 1px !important;
+  fill: var(--background-primary-alt) !important;
+  stroke: var(--text-faint) !important;
+  stroke-width: 1px !important;
 }
 
 .cluster text {
-    fill: var(--background-primary) !important;
+  fill: var(--background-primary) !important;
 }
 
 div.mermaidTooltip {
-    position: absolute !important;
-    text-align: center !important;
-    max-width: 200px !important;
-    padding: 2px !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
-    font-size: 10px !important;
-    background: var(--background-secondary) !important;
-    border: 1px solid var(--text-faint) !important;
-    border-radius: 2px !important;
-    pointer-events: none !important;
-    z-index: 100 !important;
+  position: absolute !important;
+  text-align: center !important;
+  max-width: 200px !important;
+  padding: 2px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 10px !important;
+  background: var(--background-secondary) !important;
+  border: 1px solid var(--text-faint) !important;
+  border-radius: 2px !important;
+  pointer-events: none !important;
+  z-index: 100 !important;
 }
-
 
 /* Sequence Diagram variables */
 
 .actor {
-    stroke: var(--text-accent) !important;
-    fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
 }
 
-text.actor>tspan {
-    fill: var(--text-muted) !important;
-    stroke: none !important;
+text.actor > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
 }
 
 .actor-line {
-    stroke: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .messageLine0 {
-    stroke-width: 1.5 !important;
-    stroke-dasharray: none !important;
-    stroke: var(--text-muted) !important;
+  stroke-width: 1.5 !important;
+  stroke-dasharray: none !important;
+  stroke: var(--text-muted) !important;
 }
 
 .messageLine1 {
-    stroke-width: 1.5 !important;
-    stroke-dasharray: 2, 2 !important;
-    stroke: var(--text-muted) !important;
+  stroke-width: 1.5 !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-muted) !important;
 }
 
 #arrowhead path {
-    fill: var(--text-muted) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .sequenceNumber {
-    fill: var(--background-primary) !important;
+  fill: var(--background-primary) !important;
 }
 
 #sequencenumber {
-    fill: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
 }
 
 #crosshead path {
-    fill: var(--text-muted) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .messageText {
-    fill: var(--text-muted) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .labelBox {
-    stroke: var(--text-accent) !important;
-    fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
 }
 
 .labelText,
-.labelText>tspan {
-    fill: var(--text-muted) !important;
-    stroke: none !important;
+.labelText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
 }
 
 .loopText,
-.loopText>tspan {
-    fill: var(--text-muted) !important;
-    stroke: none !important;
+.loopText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
 }
 
 .loopLine {
-    stroke-width: 2px !important;
-    stroke-dasharray: 2, 2 !important;
-    stroke: var(--text-accent) !important;
-    fill: var(--text-accent) !important;
+  stroke-width: 2px !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
 }
 
 .note {
-    stroke: var(--text-normal) !important;
-    fill: var(--text-accent) !important;
+  stroke: var(--text-normal) !important;
+  fill: var(--text-accent) !important;
 }
 
 .noteText,
-.noteText>tspan {
-    fill: var(--background-secondary-alt) !important;
-    stroke: none !important;
+.noteText > tspan {
+  fill: var(--background-secondary-alt) !important;
+  stroke: none !important;
 }
-
 
 /* Gantt chart variables */
 
 .activation0 {
-    fill: var(--background-secondary) !important;
-    stroke: var(--text-accent) !important;
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
 }
 
 .activation1 {
-    fill: var(--background-secondary) !important;
-    stroke: var(--text-accent) !important;
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
 }
 
 .activation2 {
-    fill: var(--background-secondary) !important;
-    stroke: var(--text-accent) !important;
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
 }
-
 
 /** Section styling */
 
 .mermaid-main-font {
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .section {
-    stroke: none !important;
-    opacity: 0.2 !important;
+  stroke: none !important;
+  opacity: 0.2 !important;
 }
 
 .section0 {
-    fill: var(--text-faint) !important;
+  fill: var(--text-faint) !important;
 }
 
 .section2 {
-    fill: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
 }
 
 .section1,
 .section3 {
-    fill: var(--text-normal) !important;
-    opacity: 0.2 !important;
+  fill: var(--text-normal) !important;
+  opacity: 0.2 !important;
 }
 
 .sectionTitle0 {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .sectionTitle1 {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .sectionTitle2 {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .sectionTitle3 {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .sectionTitle {
-    text-anchor: start !important;
-    font-size: 9px !important;
-    text-height: 14px !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  text-anchor: start !important;
+  font-size: 9px !important;
+  line-height: 14px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
-
 
 /* Grid and axis */
 
 .grid .tick {
-    stroke: var(--text-muted) !important;
-    opacity: 0.2 !important;
-    shape-rendering: crispEdges !important;
+  stroke: var(--text-muted) !important;
+  opacity: 0.2 !important;
+  shape-rendering: crispEdges !important;
 }
 
 .grid .tick text {
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .grid path {
-    stroke-width: 0 !important;
+  stroke-width: 0 !important;
 }
-
 
 /* Today line */
 
 .today {
-    fill: none !important;
-    stroke: var(--background-modifier-error) !important;
-    stroke-width: 2px !important;
+  fill: none !important;
+  stroke: var(--background-modifier-error) !important;
+  stroke-width: 2px !important;
 }
 
-
 /* Task styling */
-
 
 /* Default task */
 
 .task {
-    stroke-width: 0.5px !important;
+  stroke-width: 0.5px !important;
 }
 
 .taskText {
-    text-anchor: middle !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  text-anchor: middle !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .taskText:not([font-size]) {
-    font-size: 9px !important;
+  font-size: 9px !important;
 }
 
 .taskTextOutsideRight {
-    fill: var(--text-normal) !important;
-    text-anchor: start !important;
-    font-size: 9px !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  fill: var(--text-normal) !important;
+  text-anchor: start !important;
+  font-size: 9px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .taskTextOutsideLeft {
-    fill: var(--text-normal) !important;
-    text-anchor: end !important;
-    font-size: 9px !important;
+  fill: var(--text-normal) !important;
+  text-anchor: end !important;
+  font-size: 9px !important;
 }
-
 
 /* Special case clickable */
 
 .task.clickable {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 .taskText.clickable {
-    cursor: pointer !important;
-    fill: var(--interactive-accent_hover) !important !important;
-    font-weight: bold !important;
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
 }
 
 .taskTextOutsideLeft.clickable {
-    cursor: pointer !important;
-    fill: var(--interactive-accent_hover) !important !important;
-    font-weight: bold !important;
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
 }
 
 .taskTextOutsideRight.clickable {
-    cursor: pointer !important;
-    fill: var(--interactive-accent_hover) !important !important;
-    font-weight: bold !important;
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
 }
-
 
 /* Specific task settings for the sections*/
 
@@ -1105,27 +1222,26 @@ text.actor>tspan {
 .taskText1,
 .taskText2,
 .taskText3 {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .task0,
 .task1,
 .task2,
 .task3 {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .taskTextOutside0,
 .taskTextOutside2 {
-    fill: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
 }
 
 .taskTextOutside1,
 .taskTextOutside3 {
-    fill: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
 }
-
 
 /* Active task */
 
@@ -1133,17 +1249,16 @@ text.actor>tspan {
 .active1,
 .active2,
 .active3 {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .activeText0,
 .activeText1,
 .activeText2,
 .activeText3 {
-    fill: var(--text-normal) !important !important;
+  fill: var(--text-normal) !important;
 }
-
 
 /* Completed task */
 
@@ -1151,18 +1266,17 @@ text.actor>tspan {
 .done1,
 .done2,
 .done3 {
-    stroke: var(--text-muted) !important;
-    fill: var(--text-faint) !important;
-    stroke-width: 1 !important;
+  stroke: var(--text-muted) !important;
+  fill: var(--text-faint) !important;
+  stroke-width: 1 !important;
 }
 
 .doneText0,
 .doneText1,
 .doneText2,
 .doneText3 {
-    fill: var(--text-normal) !important !important;
+  fill: var(--text-normal) !important;
 }
-
 
 /* Tasks on the critical line */
 
@@ -1170,360 +1284,359 @@ text.actor>tspan {
 .crit1,
 .crit2,
 .crit3 {
-    stroke: var(--accent-strong) !important;
-    fill: var(--accent-strong) !important;
-    stroke-width: 1!important;
+  stroke: var(--accent-strong) !important;
+  fill: var(--accent-strong) !important;
+  stroke-width: 1 !important;
 }
 
 .activeCrit0,
 .activeCrit1,
 .activeCrit2,
 .activeCrit3 {
-    stroke: var(--accent-strong) !important;
-    fill: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 .doneCrit0,
 .doneCrit1,
 .doneCrit2,
 .doneCrit3 {
-    stroke: var(--accent-strong) !important;
-    fill: var(--text-muted) !important;
-    stroke-width: 0.5 !important;
-    cursor: pointer !important;
-    shape-rendering: crispEdges !important;
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-muted) !important;
+  stroke-width: 0.5 !important;
+  cursor: pointer !important;
+  shape-rendering: crispEdges !important;
 }
 
 .milestone {
-    transform: rotate(45deg) scale(0.8, 0.8) !important;
+  transform: rotate(45deg) scale(0.8, 0.8) !important;
 }
 
 .milestoneText {
-    font-style: italic !important;
+  font-style: italic !important;
 }
 
 .doneCritText0,
 .doneCritText1,
 .doneCritText2,
 .doneCritText3 {
-    fill: var(--text-normal) !important !important;
+  fill: var(--text-normal) !important;
 }
 
 .activeCritText0,
 .activeCritText1,
 .activeCritText2,
 .activeCritText3 {
-    fill: var(--text-normal) !important !important;
+  fill: var(--text-normal) !important;
 }
 
 .titleText {
-    text-anchor: middle !important;
-    font-size: 16px !important;
-    fill: var(--text-normal) !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  text-anchor: middle !important;
+  font-size: 16px !important;
+  fill: var(--text-normal) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 g.classGroup text {
-    fill: var(--text-accent) !important;
-    stroke: none !important;
-    font-family: consolas, monospace, Segoe UI, "trebuchet ms", verdana, arial !important;
-    font-size: 8px !important;
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-family: consolas, monospace, Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 8px !important;
 }
 
 g.classGroup text .title {
-    font-weight: bolder !important;
+  font-weight: bolder !important;
 }
 
 g.clickable {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 g.classGroup rect {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
 }
 
 g.classGroup line {
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 .classLabel .box {
-    stroke: none !important;
-    stroke-width: 0 !important;
-    fill: var(--background-secondary-alt) !important;
-    opacity: 0.2 !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.2 !important;
 }
 
 .classLabel .label {
-    fill: var(--text-accent) !important;
-    font-size: 10px !important;
+  fill: var(--text-accent) !important;
+  font-size: 10px !important;
 }
 
 .relation {
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
-    fill: none !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
 }
 
 .dashed-line {
-    stroke-dasharray: 3 !important;
+  stroke-dasharray: 3 !important;
 }
 
 #compositionStart {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #compositionEnd {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #aggregationStart {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #aggregationEnd {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #dependencyStart {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #dependencyEnd {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #extensionStart {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 #extensionEnd {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 .commit-id,
 .commit-msg,
 .branch-label {
-    fill: var(--text-muted) !important;
-    color: var(--text-muted) !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  fill: var(--text-muted) !important;
+  color: var(--text-muted) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .pieTitleText {
-    text-anchor: middle !important;
-    font-size: 18px !important;
-    fill: var(--text-normal) !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  text-anchor: middle !important;
+  font-size: 18px !important;
+  fill: var(--text-normal) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .slice {
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 g.stateGroup text {
-    fill: var(--text-accent) !important;
-    stroke: none !important;
-    font-size: 10px !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 g.stateGroup text {
-    fill: var(--text-accent) !important;
-    stroke: none !important;
-    font-size: 10px !important;
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
 }
 
 g.stateGroup .state-title {
-    font-weight: bolder !important;
-    fill: var(--background-secondary-alt) !important;
+  font-weight: bolder !important;
+  fill: var(--background-secondary-alt) !important;
 }
 
 g.stateGroup rect {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
 }
 
 g.stateGroup line {
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
 }
 
 .transition {
-    stroke: var(--text-accent) !important;
-    stroke-width: 1 !important;
-    fill: none !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
 }
 
 .stateGroup .composit {
-    fill: var(--text-normal) !important;
-    border-bottom: 1px !important;
+  fill: var(--text-normal) !important;
+  border-bottom: 1px !important;
 }
 
 .stateGroup .alt-composit {
-    fill: #e0e0e0 !important;
-    border-bottom: 1px !important;
+  fill: #e0e0e0 !important;
+  border-bottom: 1px !important;
 }
 
 .state-note {
-    stroke: var(--text-faint) !important;
-    fill: var(--text-accent) !important;
+  stroke: var(--text-faint) !important;
+  fill: var(--text-accent) !important;
 }
 
 .state-note text {
-    fill: black !important;
-    stroke: none !important;
-    font-size: 10px !important;
+  fill: black !important;
+  stroke: none !important;
+  font-size: 10px !important;
 }
 
 .stateLabel .box {
-    stroke: none !important;
-    stroke-width: 0 !important;
-    fill: var(--background-secondary-alt) !important;
-    opacity: 0.5 !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.5 !important;
 }
 
 .stateLabel text {
-    fill: black !important;
-    font-size: 10px !important;
-    font-weight: bold !important;
-    font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  fill: black !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 }
 
 .node circle.state-start {
-    fill: black !important;
-    stroke: black !important;
+  fill: black !important;
+  stroke: black !important;
 }
 
 .node circle.state-end {
-    fill: black !important;
-    stroke: var(--text-normal) !important;
-    stroke-width: 1.5 !important;
+  fill: black !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 1.5 !important;
 }
 
 #statediagram-barbEnd {
-    fill: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
 }
 
 .statediagram-cluster rect {
-    fill: var(--background-secondary-alt) !important;
-    stroke: var(--text-accent) !important;
-    stroke-width: 1px !important;
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1px !important;
 }
 
 .statediagram-cluster rect.outer {
-    rx: 5px !important;
-    ry: 5px !important;
+  rx: 5px !important;
+  ry: 5px !important;
 }
 
 .statediagram-state .divider {
-    stroke: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
 }
 
 .statediagram-state .title-state {
-    rx: 5px !important;
-    ry: 5px !important;
+  rx: 5px !important;
+  ry: 5px !important;
 }
 
 .statediagram-cluster.statediagram-cluster .inner {
-    fill: var(--text-normal) !important;
+  fill: var(--text-normal) !important;
 }
 
 .statediagram-cluster.statediagram-cluster-alt .inner {
-    fill: #e0e0e0 !important;
+  fill: #e0e0e0 !important;
 }
 
 .statediagram-cluster .inner {
-    rx: 0 !important;
-    ry: 0 !important;
+  rx: 0 !important;
+  ry: 0 !important;
 }
 
 .statediagram-state rect.basic {
-    rx: 5px !important;
-    ry: 5px !important;
+  rx: 5px !important;
+  ry: 5px !important;
 }
 
 .statediagram-state rect.divider {
-    stroke-dasharray: 10, 10 !important;
-    fill: #efefef !important;
+  stroke-dasharray: 10, 10 !important;
+  fill: #efefef !important;
 }
 
 .note-edge {
-    stroke-dasharray: 5 !important;
+  stroke-dasharray: 5 !important;
 }
 
 .statediagram-note rect {
-    fill: var(--text-accent) !important;
-    stroke: var(--text-muted) !important;
-    stroke-width: 1px !important;
-    rx: 0 !important;
-    ry: 0 !important;
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted) !important;
+  stroke-width: 1px !important;
+  rx: 0 !important;
+  ry: 0 !important;
 }
 
 :root {
-    --mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
-    --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  --mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
+  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
 }
-
 
 /* Classes common for multiple diagrams */
 
 .error-icon {
-    fill: var(--text-error) !important;
+  fill: var(--text-error) !important;
 }
 
 .error-text {
-    fill: var(--text-muted) !important;
-    stroke: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 .edge-thickness-normal {
-    stroke-width: 1px !important;
+  stroke-width: 1px !important;
 }
 
 .edge-thickness-thick {
-    stroke-width: 3px !important;
+  stroke-width: 3px !important;
 }
 
 .edge-pattern-solid {
-    stroke-dasharray: 0 !important;
+  stroke-dasharray: 0 !important;
 }
 
 .edge-pattern-dashed {
-    stroke-dasharray: 3 !important;
+  stroke-dasharray: 3 !important;
 }
 
 .edge-pattern-dotted {
-    stroke-dasharray: 2 !important;
+  stroke-dasharray: 2 !important;
 }
 
 .marker {
-    fill: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
 }
 
 .marker.cross {
-    stroke: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
 }
 
 rect {
-    fill: var(--text-accent-hover);
-    fill-opacity: 1;
-    stroke: var(--text-normal);
+  fill: var(--text-accent-hover);
+  fill-opacity: 1;
+  stroke: var(--text-normal);
 }
