@@ -593,7 +593,7 @@ input[type="number"] {
   font-size: 14px;
   color: var(--text-accent);
   border-radius: 0px;
-  border-top: 1px solid var(--background-modifier-border);*/
+  border-top: 1px solid var(--background-modifier-border);
   padding: 2px 12px 0px 18px;
 }
 
