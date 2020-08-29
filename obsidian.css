@@ -190,7 +190,7 @@ ul ul::before {
   border-radius: 0px;
   border: 0;
   border-left: 1px solid var(--text-selection);
-  margin: 0px -20px;
+  margin: 0px -10px;
 }
 
 .markdown-embed {
@@ -863,6 +863,13 @@ ul ul {
 ul ul ul {
   list-style-type: circle;
 }
+
+/*=============== tables align ================*/
+tbody {
+  display: table-row-group;
+  vertical-align: top;
+  border-color: inherit;
+}
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
@@ -897,6 +904,7 @@ ul ul ul {
   max-width: max(500px, 60%);
   outline: none;
 }
+
 /*=============== add mods below ================*/
 
 /*=============== add mods below ================*/
