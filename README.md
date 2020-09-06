@@ -41,3 +41,7 @@ install notes :
 backup your old obsidian.css, download the release and unzip the obsidian.css in your vault.
 if needed, copy your csss snippets at the end of the file.
 Make sure that `use custom css` option is enabled in the Obsidian settings
+
+### share & improve
+this theme is free to use, share and modify. It's been written from scratch with the exception of the trace line indentation mod by Death_au.
+If you decide to use this theme as a base for further tweakings, please consider keeping the original credit too. thanks and enjoy.
