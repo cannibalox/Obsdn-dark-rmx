@@ -1,5 +1,5 @@
-/* obsdn dark rmx - v202008260347 - by _ph / www.hpx1.com*/
-/* latin */
+/* obsdn dark rmx - v202009070034 - by _ph / www.hpx1.com*/
+/* free to use, share and tweak - consider keeping the credits if you use this theme as a starter kit */
 
 body {
   font-size: 15px;
@@ -154,9 +154,7 @@ ul ul {
 .cm-hmd-list-indent .cm-tab::before,
 ul ul::before {
   content: "";
-  border-left: 2px solid var(--background-modifier-border);
-  /*rgba(20,122,255,0.3);
-*/
+  border-left: 2px solid var(--background-modifier-border);  /*rgba(20,122,255,0.3);*/
   position: absolute;
 }
 
@@ -297,7 +295,7 @@ svg.link {
 
 .workspace-ribbon-collapse-btn {
   margin-top: 0px;
-  padding: 10px 6px 4px 6px;
+  padding: 8px 6px 4px 6px;
   cursor: pointer;
   color: var(--text-faint);
   transform: none;
@@ -332,30 +330,27 @@ svg.link {
 
 /* ==== align top tab header with header title ==== */
 
-.workspace-tab-header-container {
+.workspace-leaf {
   display: flex;
-  background-color: var(--background-secondary-alt);
-  height: 36px;
-  padding-top: 1px;
+  flex-direction: column;
+  position: relative;
+  will-change: transform;
+  min-height: 20px;
 }
-
-/* =====  left sidebar =========*/
-
-.workspace-tab-header-container {
+.workspace-leaf-content[data-type='backlink'] .view-content {
+  padding: 0;
+  overflow: hidden;
   display: flex;
-  background-color: var(--background-secondary-alt);
-  height: 36px; /* aligh tab header */
-  padding-top: 1px;
+  flex-direction: column;
+  min-height: 20px;
 }
-
 .nav-header {
-  padding: 10px 10px 4px 8px;
+  padding: 8px 4px 1px 8px;
 }
-
 .nav-buttons-container {
   display: flex;
   justify-content: left;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 1px solid var(--background-modifier-border);
   margin-bottom: 2px;
 }
@@ -476,66 +471,101 @@ input[type="number"] {
 
 /*==== tabs =====*/
 
-.workspace-tab-header-inner {
-  padding: 9px 20px;
-  height: 100%;
-  display: flex;
-}
-
 .workspace-tab-container-before,
 .workspace-tab-container-after {
   width: 0px;
   height: 100%;
 }
 
-/* ====== font size headers =========*/
-
-.view-header-title {
-  font-size: 14px;
-  font-weight: 600;
-}
-
 /* ===== view header color ==========*/
-
-.workspace-leaf.mod-active .view-header-icon {
-  padding: 5px 10px;
-  color: var(--interactive-accent);
-  cursor: grab;
-  position: relative;
-  top: 2px;
-}
 
 .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
   border-bottom: 2px solid var(--interactive-accent);
 }
 
+/* smaller menu backlinks etc */
+.workspace-leaf-content[data-type='search'] .nav-action-button, .workspace-leaf-content[data-type='backlink'] .nav-action-button {
+  padding: 2px 4px 0px 4px;
+  margin: 0px 3px 3px 3px;
+  border-radius: 4px;
+}
+/*  smaller tabs */
+.workspace-tab-header-container {
+  display: flex;
+  background-color: var(--background-secondary-alt);
+  height: 29px;
+  padding-top: 1px;
+}
+.workspace-tab-header-inner {
+  padding: 4px 20px;
+  height: 100%;
+  display: flex;
+}
+.workspace-tabs {
+  background-color: var(--background-secondary-alt);
+  overflow: hidden;
+  padding: 0px 4px 28px 0;
+  position: relative;
+}
+.view-header-icon {
+  padding: 4px 10px;
+  color: var(--text-muted);
+  cursor: grab;
+  position: relative;
+  top: 0px;
+}
 .view-header {
-  height: 36px;
+  height: 29px; /*36*/
   display: flex;
   border-top: 1px solid var(--background-secondary-alt);
   border-bottom: 2px solid var(--background-secondary-alt);
   background-color: var(--background-secondary-alt);
   z-index: 1;
 }
-
-/* remove the gradient between title and icons */
-
-.workspace-leaf.mod-active .view-header-title-container:after {
-  background: var(--background-primary);
+.workspace-leaf.mod-active .view-header-icon {
+  padding: 3px 10px;
+  color: var(--interactive-accent);
+  cursor: grab;
+  position: relative;
+  top: 0px;
 }
-
+.view-header-title {
+  font-size: 10px;
+  font-weight: 600;
+  overflow: auto;
+  padding-right: 20px;
+  white-space: nowrap;
+  line-height: 30px;
+  color: var(--text-muted);
+}
+.view-actions {
+  padding: 1px 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.view-content {
+  width: 100%;
+  height: calc(100% - 29px);
+}
 .view-header-title-container:after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 32px;
-  background: var(--background-secondary-alt);
-  /*border-right: 1px solid var(--background-modifier-border);*/
+  width: 28px;
+  height: 24px;
+  background: linear-gradient(to right, transparent, var(--background-secondary-alt));
 }
 
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: linear-gradient(to right, transparent, var(--background-primary));
+}
+
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
 /* ===== tag pane ===================*/
 
 .tag-pane-tag {
@@ -640,10 +670,6 @@ input[type="number"] {
 /*========= remove rounded corners =======*/
 
 .workspace-tab-header.is-active {
-  border-radius: 0px;
-}
-
-.nav-folder-title {
   border-radius: 0px;
 }
 
@@ -870,6 +896,7 @@ tbody {
   vertical-align: top;
   border-color: inherit;
 }
+
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
@@ -892,22 +919,19 @@ tbody {
   margin-left: 10px;
   text-indent: -10px;
 }
-
-/* Justify preview text */
-.markdown-preview-view p {
-  text-align: justify;
-  hyphens: auto;
+.nav-file-title-content.is-being-renamed {
+  margin-left: 0px;
+  text-indent: 0px;
 }
-
-/* reduce size of embedded files */
+/* reduce displayed size of embedded files */
 .markdown-preview-view img, .markdown-preview-view audio, .markdown-preview-view video {
   max-width: max(500px, 60%);
   outline: none;
 }
 
-/*=============== add mods below ================*/
 
 /*=============== add mods below ================*/
+
 
 /*=============== add mods below ================*/
 
@@ -924,10 +948,6 @@ tbody {
   font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas,
     monospace !important;
   color: var(--text-normal) !important;
-}
-
-.label text {
-  fill: var(--background-primary-alt) !important;
 }
 
 .node rect,
@@ -982,7 +1002,6 @@ tbody {
 }
 
 div.mermaidTooltip {
-  position: absolute !important;
   text-align: center !important;
   max-width: 200px !important;
   padding: 2px !important;
