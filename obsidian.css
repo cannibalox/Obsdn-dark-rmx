@@ -1,4 +1,4 @@
-/* obsdn dark rmx - v202009070034 - by _ph / www.hpx1.com*/
+/* obsdn dark rmx - v202009102355 - 0.8.14 by _ph / www.hpx1.com*/
 /* free to use, share and tweak - consider keeping the credits if you use this theme as a starter kit */
 
 body {
@@ -896,6 +896,44 @@ tbody {
   vertical-align: top;
   border-color: inherit;
 }
+
+/*=============== top titlebar================*/
+.titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 23px;
+  display: flex;
+  background-color: var(--background-modifier-cover);
+}
+.titlebar-button{
+  opacity:0.7;
+}
+.titlebar-button[aria-label="Minimize"] svg rect {
+  -webkit-app-region: no-drag;
+  height:2px;
+  fill: var(--text-accent);
+  stroke: var(--text-accent);
+}
+.titlebar-button[aria-label="Maximize"] svg rect {
+  stroke: var(--text-accent);
+}
+.titlebar-button.mod-back:after {
+  content:"BACK";
+  color:var(--text-on-accent);
+  font-size: 10px;
+  top:-3px;
+  position:relative;
+}
+.titlebar-button.mod-forward:before{
+  content:"NEXT";
+  color:var(--text-on-accent);
+  font-size: 10px;
+  top:-3px;
+  position:relative;
+}
+
 
 /*=============== add mods below ================*/
 /*=============== add mods below ================*/
