@@ -1,4 +1,4 @@
-/* obsdn dark rmx - v202009220910 - 0.9.00 by _ph / www.hpx1.com*/
+/* obsdn dark rmx - v202009222210 - 0.9.00 by _ph / www.hpx1.com*/
 /* free to use, share and tweak - consider keeping the credits if you use this theme as a starter kit */
 
 body {
@@ -260,10 +260,10 @@ svg.link {
 }
 
 .markdown-preview-view .file-embed {
-  background-color: var(--background-primary);
+  background-color: transparent;
   border-radius: 4px;
-  border: 2px solid var(--text-selection);
-  padding: 5px 20px 5px 20px;
+  border: 1px solid var(--text-selection);
+  padding: 0px 5px 0px 5px;
   margin: 10px 0px 10px 0px;
 }
 
@@ -307,7 +307,7 @@ svg.link {
 .workspace-tab-header-inner,
 .workspace-tab-container-before,
 .workspace-tab-container-after {
-  transition: background-color 100ms linear;
+  transition: background-color 80ms linear;
 }
 
 /* =====  ribbon vertical =========*/
@@ -466,7 +466,9 @@ input[type="number"] {
   width: 14px;
   height: 14px;
 }
-
+.view-action > svg.link {
+  color:red;
+}
 .view-header-icon > svg {
   width: 14px;
   height: 14px;
@@ -529,7 +531,7 @@ input[type="number"] {
 .workspace-tabs {
   background-color: var(--background-secondary-alt);
   overflow: hidden;
-  padding: 0px 4px 28px 0;
+  padding: 0px 4px 28px 4px;
   position: relative;
 }
 .view-header-icon {
@@ -540,7 +542,7 @@ input[type="number"] {
   top: 0px;
 }
 .view-header {
-  height: 29px; /*36*/
+  height: 29px; 
   display: flex;
   border-top: 1px solid var(--background-secondary-alt);
   border-bottom: 2px solid var(--background-secondary-alt);
@@ -620,7 +622,12 @@ input[type="number"] {
 .workspace-leaf-resize-handle:hover {
   background-color: rgba(var(--interactive-accent-rgb), 0.8);
 }
-
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  z-index: var(--layer-status-bar);
+  height: calc(100% - 28px);
+  top: unset;
+  bottom: 0;
+}
 /* a bit more padding on the left side */
 
 .markdown-preview-view {
@@ -706,7 +713,7 @@ input[type="number"] {
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
   border-bottom-left-radius: 0px;
 }
-
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
   border-top-left-radius: 0px;
 }
@@ -1179,11 +1186,15 @@ body.is-translucent {
   text-indent: 0px;
 }
 /* reduce displayed size of embedded files */
-.markdown-preview-view img, .markdown-preview-view audio, .markdown-preview-view video {
+.markdown-preview-view img {
   max-width: max(500px, 60%);
   outline: none;
+  cursor: zoom-in;
 }
-
+.markdown-preview-view img:hover {
+  max-width: min(1080px, 100%);
+  outline: none;
+}
 
 /*=============== add mods below ================*/
 
